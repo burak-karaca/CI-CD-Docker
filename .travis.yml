@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t burak-karaca/docker-react -f Dockerfile.dev .
+  - docker build -t burakaraca/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true burak-karaca/docker-react npm run test
+  - docker run -e CI=true burakaraca/docker-react npm run test
