@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t burakaraca/CI-CD-Docker -f Dockerfile.dev .
+  - docker build -t burakaraca/cicddocker -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true burakaraca/CI-CD-Docker npm run test
+  - docker run -e CI=true burakaraca/cicddocker npm run test
 
 deploy:
   provider": elasticbeanstalk
